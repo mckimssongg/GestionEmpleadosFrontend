@@ -1,0 +1,37 @@
+
+<h3>Lista empleados</h3>
+<hr>
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr class="text-center">
+      <th class="text-start">Id</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody class="table-dark">
+    <tr *ngFor="let empleado of empleados" class="text-center">
+      <td class="text-start">{{ empleado.id }}</td>
+      <td>{{ empleado.nombre }}</td>
+      <td>{{ empleado.apellido }}</td>
+      <td>{{ empleado.email }}</td>
+      <td>
+        <button class="btn btn-primary" title="Editar">
+          <i class="bi bi-pen-fill"></i>
+        </button>
+        &nbsp;
+        <button class="btn btn-success" title="Ver más">
+          <i class="bi bi-eye-fill"></i>
+        </button>
+        &nbsp;
+        <button class="btn btn-danger" title="Eliminar">
+          <i class="bi bi-x-octagon-fill"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<h5 *ngIf="empleados.length == 0" class="text-center">No hay registros</h5>
+<hr>
