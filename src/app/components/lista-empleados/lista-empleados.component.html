@@ -1,6 +1,6 @@
+<h4>Lista de empleados</h4>
 
-<h3>Lista empleados</h3>
-<hr>
+<hr />
 <table class="table table-striped">
   <thead class="table-dark">
     <tr class="text-center">
@@ -8,7 +8,7 @@
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Correo</th>
-      <th>Acciones</th>
+      <th class="text-end">Acciones &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
     </tr>
   </thead>
   <tbody class="table-dark">
@@ -17,7 +17,7 @@
       <td>{{ empleado.nombre }}</td>
       <td>{{ empleado.apellido }}</td>
       <td>{{ empleado.email }}</td>
-      <td>
+      <td class="text-end">
         <button class="btn btn-primary" title="Editar">
           <i class="bi bi-pen-fill"></i>
         </button>
