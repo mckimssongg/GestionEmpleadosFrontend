@@ -1,3 +1,4 @@
+@import "../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
 @import "bootstrap.css"
 @import "~bootstrap-icons/font/bootstrap-icons.css"
 /* CUSTOM WIDTHS */
@@ -10,13 +11,28 @@
 /* CUSTOM WIDTHS */
 
 html
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
   height: 100%
-
+  ::selection
+    background-color: #ffffff00
+  ::-moz-selection
+    background-color: #ffffff00
+  ::-webkit-selection
+    background-color: #ffffff00
+  ::-ms-selection
+    background-color: #ffffff00
+  ::-o-selection
+    background-color: #ffffff00
 body
   height: 100%
   margin: 0
   font-family: Roboto, "Helvetica Neue", sans-serif
-  background-color: #fafafa00
+  background-color: #e8c39e9c
+  overflow-x: auto
+  overflow-y: hidden
 
 .w-10
   width: 10% !important
@@ -70,9 +86,9 @@ body
     width: 20% !important
 
 .cpb
-  background-color: #3f51b5 !important
+  background-color: #3e3f3a !important
 
 .csb
-  background-color: #171f24 !important
-  &--2
-    background-color: #545454 !important
+  background-color: #ffffff9c !important
+  border-radius: 0px !important
+  box-shadow: 0px 0px 0px 0px #00000000 !important

@@ -1,0 +1,55 @@
+<!-- fomulario para agregar empleados con angular materials -->
+<h3>
+  <i
+    class="bi bi-circle-fill"
+    style="font-size: 7px; vertical-align: middle"
+  ></i>
+  &nbsp; Registro de nuevos empleados
+</h3>
+<hr />
+<mat-card class="container border csb">
+  <mat-card-header>
+    <mat-card-title>Información del personal</mat-card-title>
+  </mat-card-header>
+  <form class="px-4" [formGroup]="form" (ngSubmit)="crearEmpleado()">
+    <div class="row">
+      <mat-form-field>
+        <input
+          list="__nombre"
+          matInput
+          required
+          placeholder="Nombres"
+          formControlName="nombre"
+          autocomplete="off"
+        />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <input
+          matInput
+          required
+          placeholder="Apellidos"
+          autocomplete="off"
+          formControlName="apellido"
+        />
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field>
+        <input
+          matInput
+          required
+          placeholder="Correo electrónico"
+          autocomplete="off"
+          formControlName="email"
+        />
+      </mat-form-field>
+    </div>
+    <div class="row px-4">
+      <button mat-raised-button color="primary" class="cpb" type="submit">
+        Agregrar
+      </button>
+    </div>
+  </form>
+</mat-card>

@@ -1,4 +1,7 @@
-<h1 class="text-center mt-3 fw-bold">{{ title }}</h1>
-<div class="container">
-  <app-lista-empleados></app-lista-empleados>
+<div class="d-flex h-100">
+  <app-sidebar></app-sidebar>
+  <div class="container px-4">
+    <h1 class="text-center mt-3 fw-bold">{{ title }}</h1>
+    <router-outlet></router-outlet>
+  </div>
 </div>
