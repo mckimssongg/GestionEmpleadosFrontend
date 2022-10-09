@@ -18,4 +18,19 @@ export class EmpleadoService {
   obtenerListaDeEmpleados(): Observable<Empleado[]> {
     return this.httpClient.get<Empleado[]>(`${this.baseUrl}`);
   }
+
+  /**
+   * @param empleado Empleado
+   * @returns Observable<Object>
+   * @description Crea un nuevo empleado
+   * @example
+   * {
+   *  "nombre": "Juan",
+   * "apellido": "Perez",
+   * "email": "
+   * }
+   */
+  registrarEmpleado(empleado: Empleado): Observable<Object> {
+    return this.httpClient.post(`${this.baseUrl}`, empleado);
+  }
 }
